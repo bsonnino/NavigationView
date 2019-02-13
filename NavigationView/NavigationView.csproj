@@ -123,6 +123,33 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\CustRepoView.xaml.cs">
+      <DependentUpon>CustRepoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustView.xaml.cs">
+      <DependentUpon>CustView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderRepoView.xaml.cs">
+      <DependentUpon>OrderRepoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderView.xaml.cs">
+      <DependentUpon>OrderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesCustChartView.xaml.cs">
+      <DependentUpon>SalesCustChartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesDateChartView.xaml.cs">
+      <DependentUpon>SalesDateChartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesProdChartView.xaml.cs">
+      <DependentUpon>SalesProdChartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesRepoView.xaml.cs">
+      <DependentUpon>SalesRepoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -148,6 +175,42 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CustRepoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CustView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OrderRepoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OrderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SalesCustChartView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SalesDateChartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SalesProdChartView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SalesRepoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

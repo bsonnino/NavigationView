@@ -9,6 +9,56 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <NavigationView x:Name="NavView" 
+                        ItemInvoked="NavigationView_OnItemInvoked"
+                        BackRequested="NavView_OnBackRequested"
+                        IsBackEnabled="{Binding ElementName=ContentFrame, Path=CanGoBack}">
+            <NavigationView.MenuItems>
+                <NavigationViewItemHeader Content="Main" />
+                <NavigationViewItem Content="Customers" Icon="People" Tag="CustView"/>
+                <NavigationViewItem Content="Orders" Icon="Shop" Tag="OrderView"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Reports"/>
+                <NavigationViewItem Content="Customers" Tag="CustRepoView">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE181;" FontFamily="Segoe UI Symbol"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Orders" Tag="OrderRepoView">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE136;" FontFamily="Segoe UI Symbol"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Sales" Tag="SalesRepoView">
+                    <NavigationViewItem.Icon>
+                        <PathIcon HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                  Data="M 0,0 L20,0 40,70 140,70 140,74 36,74 20,4z 
+                                  M25,12 L150,12 140,50 37,55z 
+                                  M70,82 A10,10 360 1 1 70,81.99z 
+                                  M120,82 A10,10 360 1 1 120,81.99z" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Charts"/>
+                <NavigationViewItem Content="Sales by Customer" Tag="SalesCustChartView">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xe1a6;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Sales by Product" Tag="SalesProdChartView">
+                    <NavigationViewItem.Icon>
+                        <PathIcon Data="M0,0 L1.25,0 1.25,18 18,18 18,19.25 0,19.25z
+                                  M0,18 L18,0 19.25,0 19.25,1.25z" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Sales by Date" Tag="SalesDateChartView">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xec92;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame" 
+                   NavigationFailed="ContentFrame_OnNavigationFailed"/>
+        </NavigationView>
     </Grid>
 </Page>
